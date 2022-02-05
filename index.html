@@ -7,41 +7,70 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="src/css/normalize.css">
+  <link rel="stylesheet" href="src/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <meta name="theme-color" content="#fafafa">
+
+  <script type="text/javascript" src="src/js/app.js"></script>
 </head>
 
 <body>
 
-<main>
-  <div class="block">
-    <table class="table">
-      <tr class='columnTr'>
-        <th class='columnTh'>Имя</th>
-        <th class='columnTh'>Фамилия</th>
-        <th class='columnTh'>Телефон</th>
-        <th class='columnTh'>Описание</th>
-        <th class='columnTh'>Цвет глаз</th>
-      </tr>
-      <tr class='columnTr'>
-        <td class='rowFirstName'>Susan</td>
-        <td class='rowLastName'>Carol</td>
-        <td class='rowPhone'><a href="tel:+1234567890">1234567890</a></td>
-        <td class='rowAbout'>about</td>
-        <td class='rowEyeColor'>Red</td>
-      </tr>
-    </table>
-  </div>
-  <div class="block-edit">
-    <h1 class="title">Edit Row</h1>
-  </div>
-</main>
+  <main>
+    <div class="block">
+      <table class="table">
+        <tr class='columnTr'>
+          <th class='columnTh'>Имя</th>
+          <th class='columnTh'>Фамилия</th>
+          <th class='columnTh'>Телефон</th>
+          <th class='columnTh'>Описание</th>
+          <th class='columnTh'>Цвет глаз</th>
+        </tr>
+        <tr class='columnTr' id="row">
+          <td class='rowFirstName'>${props.name.firstName}</td>
+          <td class='rowLastName'>Carol</td>
+          <td class='rowPhone'><a href="tel:+1234567890">1234567890</a></td>
+          <td class='rowAbout'>about</td>
+          <td class='rowEyeColor'>Red</td>
+        </tr>
+      </table>
+    </div>
+    <div class="block-edit">
+      <h1 class="editTitle">Edit Row</h1>
+      <form class="userUpdate">
+        <div class="userItem">
+          <label>FirstName</label>
+          <input type="text" name="FirstName" placeholder="${}">
+        </div>
 
-  <script src="js/app.js"></script>
+        <div class="userItem">
+          <label>LastName</label>
+          <input type="text" name="LastName" placeholder="${}">
+        </div>
+
+        <div class="userItem">
+          <label>Phone</label>
+          <input type="tel" name="Phone" placeholder="${}">
+        </div>
+
+        <div class="userItem">
+          <label>About</label>
+          <input type="text" name="About" placeholder="${}">
+        </div>
+
+        <div class="userItem">
+          <label>EyeColor</label>
+          <input type="text" name="EyeColor" placeholder="${}">
+        </div>
+
+        <button class='userButton' type='submit'>Update</button>
+      </form>
+    </div>
+  </main>
+
 </body>
 
 </html>

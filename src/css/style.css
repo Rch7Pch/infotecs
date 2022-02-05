@@ -1,0 +1,92 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+td {
+    border-bottom-style: groove ;
+}
+
+main {
+    width: 100%;
+    display: flex;
+}
+
+.block {
+    width: 50%;
+    -webkit-box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.table {
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.columnTr {
+    text-align: left;
+}
+
+.columnTh {
+    border-bottom-style: solid;
+}
+
+.block-edit {
+    width: 50%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.editTitle {
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom-style: solid;
+}
+
+.userUpdate {
+    display: flex;
+    flex-direction: column;
+}
+
+.userItem {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.userItem>label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.userItem>input {
+    height: 20px;
+    width: 400px;
+    padding: 10px;
+    margin-left: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.userButton {
+    width: 200px;
+    border: none;
+    background-color: #9B2840;
+    color: white;
+    padding: 7px 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.userButton:hover {
+    background-color: #1775C5;
+}
