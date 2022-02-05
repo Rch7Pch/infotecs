@@ -1,0 +1,43 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    width: 100%;
+    display: flex;
+}
+
+.block {
+    width: 50%;
+    -webkit-box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.table {
+    width: 100%;
+    border-spacing: 20px;
+}
+
+.columnTr {
+    text-align: left;
+}
+
+.columnTh {
+    border-bottom-style: solid;
+}
+
+.block-edit {
+    width: 50%;
+    border: 3px solid purple;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom-style: solid;
+}
