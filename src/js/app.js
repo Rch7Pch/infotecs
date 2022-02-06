@@ -1,22 +1,30 @@
-let userList = '../data.json';
+// получение данных с сервера
+async function getResponse() {
+    let response = await fetch('https://raw.githubusercontent.com/Rch7Pch/infotecs/master/src/data.json');
+    let rowUser = await response.json();
+    rowUser = rowUser.splice(0, 10)
 
-let data = JSON.parse(userList);
-console.log(data);
+    let key;
+    let listRow = document.querySelector('.table');
+
+    for (key in rowUser) {
+
+        listRow.innerHTML += `
+            <tr class="columnTr">
+              <td class="rowFirstName">${rowUser[key].name.firstName}</td>
+              <td class="rowLastName">${rowUser[key].name.lastName}</td>
+              <td class="rowPhone"><a href='${rowUser[key].phone}'>${rowUser[key].phone}</a></td>
+              <td class="rowAbout">${rowUser[key].about}</td>
+              <td class="rowEyeColor">${rowUser[key].eyeColor}</td>
+            </tr>
+        `
+
+
+        console.log(listRow)
+    }
+
+}
 
 
 
-// Row generator
-// generateRow(){
-//     // проверка на параметры (id, name, phone, about ) пришли ли они или нет
-//     let template = '';
-//     let tr = document.createElement('tr');
-//     tr.className = 'columnTr';
-//
-//     for(let i; i < data.length; i++) {
-//
-//     }
-//
-//     tr.innerHTML = template;
-//     console.log(tr);
-//     return tr;
-// }
+getResponse();
