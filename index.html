@@ -25,45 +25,38 @@
         <tr class='columnTr'>
           <th class='columnTh'>Имя</th>
           <th class='columnTh'>Фамилия</th>
-          <th class='columnTh'>Телефон</th>
           <th class='columnTh'>Описание</th>
           <th class='columnTh'>Цвет глаз</th>
         </tr>
-<!--        <tr class='columnTr'>-->
-<!--          <td class='rowFirstName'>${props.name.firstName}</td>-->
-<!--          <td class='rowLastName'>Carol</td>-->
-<!--          <td class='rowPhone'><a href="tel:+1234567890">1234567890</a></td>-->
-<!--          <td class='rowAbout'>about</td>-->
-<!--          <td class='rowEyeColor'>Red</td>-->
-<!--        </tr>-->
       </table>
     </div>
+
     <div class="block-edit">
       <h1 class="editTitle">Edit Row</h1>
       <form class="userUpdate">
         <div class="userItem">
           <label>FirstName</label>
-          <input type="text" name="FirstName" placeholder="${}">
+          <input type="text" name="FirstName" class="firstName" placeholder="">
         </div>
 
         <div class="userItem">
           <label>LastName</label>
-          <input type="text" name="LastName" placeholder="${}">
+          <input type="text" name="LastName" class="lastName" placeholder="">
         </div>
 
         <div class="userItem">
           <label>Phone</label>
-          <input type="tel" name="Phone" placeholder="${}">
+          <input type="tel" name="Phone" class="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="">
         </div>
 
         <div class="userItem">
           <label>About</label>
-          <input type="text" name="About" placeholder="${}">
+          <input type="text" name="About" class="about" placeholder="">
         </div>
 
         <div class="userItem">
           <label>EyeColor</label>
-          <input type="text" name="EyeColor" placeholder="${}">
+          <input type="text" name="EyeColor" class="eyeColor" placeholder="">
         </div>
 
         <button class='userButton' type='submit'>Update</button>
