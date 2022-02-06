@@ -4,24 +4,31 @@ async function getResponse() {
     let rowUser = await response.json();
     rowUser = rowUser.splice(0, 10)
 
-    let key;
     let listRow = document.querySelector('.table');
 
-    for (key in rowUser) {
+    for (let key in rowUser) {
 
         listRow.innerHTML += `
-            <tr class="columnTr">
-              <td class="rowFirstName">${rowUser[key].name.firstName}</td>
-              <td class="rowLastName">${rowUser[key].name.lastName}</td>
-              <td class="rowPhone"><a href='${rowUser[key].phone}'>${rowUser[key].phone}</a></td>
-              <td class="rowAbout">${rowUser[key].about}</td>
-              <td class="rowEyeColor">${rowUser[key].eyeColor}</td>
+            <tr class="rowTr">
+              <td class="row rowFirstName">${rowUser[key].name.firstName}</td>
+              <td class="row rowLastName">${rowUser[key].name.lastName}</td>
+              <td class="row rowAbout">${rowUser[key].about}</td>
+              <td class="row rowEyeColor">${rowUser[key].eyeColor}</td>
             </tr>
         `
-
-
-        console.log(listRow)
     }
+
+    //таблица
+    let blockRow = document.querySelectorAll('.rowTr');
+    let inputFirstName = document.querySelector('.firstName');
+    let inputLastName = document.querySelector('.lastName');
+
+    blockRow.forEach(block => {
+        block.addEventListener('click', () => {
+            inputFirstName.placeholder(`${rowUser[0].name.firstName}`)
+            inputLastName.placeholder(`${rowUser[0].name.lastName}`)
+        });
+    });
 
 }
 
