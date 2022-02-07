@@ -101,3 +101,10 @@ main {
 .userButton:hover {
     background-color: #1775C5;
 }
+
+.square {
+    width: 30px;
+    height: 30px;
+
+    display: block;
+}
