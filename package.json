@@ -4,7 +4,7 @@
   "description": "test task infotecs",
   "license": "1.0.0",
   "author": "rch_pch",
-  "homepage": "",
+  "homepage": "https://github.com/Rch7Pch/infotecs",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",

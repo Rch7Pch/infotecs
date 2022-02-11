@@ -38,7 +38,19 @@ main {
 }
 
 .columnTh {
+    font-size: 12px;
     border-bottom-style: solid;
+    position: relative;
+}
+
+.columnTh:after {
+    content: '';
+    width: 18px;
+    height: 19px;
+    background-image: url(../img/icon-sort.svg);
+    position: absolute;
+    margin-left: 2px;
+    cursor: pointer;
 }
 
 .row {

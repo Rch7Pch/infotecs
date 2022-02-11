@@ -1,6 +1,7 @@
 var rowUser = [];
 var id = '';
 
+// get elements
 var inputFirstName = document.querySelector('.firstName');
 var inputLastName = document.querySelector('.lastName');
 var inputPhone = document.querySelector('.phone');
@@ -24,6 +25,7 @@ const updateButtonDate = () => {
         }
         return x
     });
+
     // update localStorage
     window.localStorage.setItem('data', JSON.stringify(rowUser));
 
@@ -45,7 +47,7 @@ const handlerChoose = (el) => {
     inputEyeColor.value = (`${el.eyeColor}`);
 }
 
-// получение данных с сервера
+// get date с сервера
 async function getResponse() {
     if(window.localStorage.getItem('data')){
         rowUser = [...JSON.parse(window.localStorage.getItem('data'))];
