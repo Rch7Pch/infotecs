@@ -27,6 +27,7 @@ const updateButtonDate = () => {
     });
 
     // update localStorage
+    // Перевод объекта JavaScript в строку JSON осуществляется с помощью метода JSON.stringify
     window.localStorage.setItem('data', JSON.stringify(rowUser));
 
     var i, elements = document.getElementsByClassName('rowTr');
